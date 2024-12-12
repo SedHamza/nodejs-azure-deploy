@@ -18,7 +18,7 @@ app.get("/messages", (req, res) => {
     } else {
       res.status(200).json(results);
     }
-  });
+  });  
 });
 
 //pour recupere les message entre 2 person
