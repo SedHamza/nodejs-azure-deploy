@@ -1,11 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./database");
+const cors = require("cors");
+
 
 const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
+app.use(cors())
 
 //pour recuperer les messgae
 app.get("/messages", (req, res) => {
